@@ -1,34 +1,63 @@
-# Gradle files
-.gradle/
-build/
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appkayga Af-Soomaali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
 
-# Local configuration file (sdk path, etc)
-local.properties
+    <div class="card">
+        <h1>Ku soo dhawoow Appkayga</h1>
+        <p>Fadlan geli macluumaadkaaga hoose:</p>
+        
+        <input type="text" id="magac" placeholder="Magacaaga">
+        <textarea id="fariin" placeholder="Fariintaada"></textarea>
+        <button onclick="sooBandhig()">Dir</button>
+        
+        <h3>Natiijada:</h3>
+        <div id="natiijo"></div>
+    </div>
 
-# Log/OS Files
-*.log
+    <script>
+        function sooBandhig() {
+            let magac = document.getElementById('magac').value;
+            let fariin = document.getElementById('fariin').value;
+            document.getElementById('natiijo').innerHTML = `<strong>${magac}</strong>: ${fariin}`;
+        }
+    </script>
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+</body>
+</html>
